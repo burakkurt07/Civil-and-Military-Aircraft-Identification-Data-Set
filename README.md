@@ -306,9 +306,7 @@ data/
 │   ├── dataset_summary.json
 │   ├── sample_images/
 │   └── visualizations/
-```
 
----
 
 ## 🖼️ Image Specifications
 
