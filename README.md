@@ -1,8 +1,10 @@
-# Sivil ve Askeri Uçak Tanıma Veri Seti
+TR & EN |
+
+# ✈️ Sivil ve Askeri Uçak Tanıma Veri Seti
 
 Bu veri seti, hem sivil hem de askeri uçakları içeren kapsamlı bir uçak tanıma veri setidir. Veri seti, farklı açılardan görüntüler içerir ve çeşitli uçak kategorilerini kapsar.
 
-## Veri Seti Hakkında
+## 📁 Veri Seti Hakkında
 
 Bu veri seti, uçak tanıma ve sınıflandırma modelleri geliştirmek için oluşturulmuştur. Veri seti, aşağıdaki kategorileri içermektedir:
 
@@ -11,7 +13,7 @@ Bu veri seti, uçak tanıma ve sınıflandırma modelleri geliştirmek için olu
 - **İnsansız Hava Araçları (İHA'lar)**: MQ-9 Reaper, Global Hawk, Predator gibi askeri İHA'lar ve DJI Phantom gibi sivil İHA'lar
 - **Eğitim Uçakları**: Cessna 172, Piper PA-28 gibi eğitim amaçlı kullanılan uçaklar
 
-## Veri Seti İstatistikleri
+## 📊 Veri Seti İstatistikleri
 
 - **Toplam Görüntü Sayısı**: 8,275
 - **Kategoriler**:
@@ -19,12 +21,12 @@ Bu veri seti, uçak tanıma ve sınıflandırma modelleri geliştirmek için olu
   - Askeri Uçaklar: 7,467 görüntü (30 sınıf)
   - İHA'lar: 87 görüntü (5 sınıf)
   - Eğitim Uçakları: 41 görüntü (3 sınıf)
-- **Veri Seti Bölünmesi**:
+- 📌 **Veri Seti Bölünmesi**:
   - Eğitim (Train): 5,777 görüntü
   - Test: 1,226 görüntü
   - Doğrulama (Validation): 1,272 görüntü
 
-## Veri Seti Yapısı
+## 🗂️ Veri Seti Yapısı
 
 Veri seti, aşağıdaki yapıda organize edilmiştir:
 
@@ -62,7 +64,7 @@ data/
 - **Format**: RGB formatında JPEG görüntüler
 - **Etiketleme**: Hiyerarşik etiketleme (kategori, üretici, model)
 
-## Sınıf Dağılımı
+## 🖼️ Sınıf Dağılımı
 
 ### Sivil Uçaklar (17 sınıf)
 - ATR 42, ATR 72
@@ -101,7 +103,7 @@ Veri seti, her uçak modeli için aşağıdaki metadata bilgilerini içerir:
 - Menzil
 - Açıklama
 
-## Kullanım Alanları
+## 🧠 Kullanım Alanları
 
 Bu veri seti aşağıdaki alanlarda kullanılabilir:
 
@@ -238,3 +240,138 @@ Bu veri seti hakkında sorularınız veya geri bildirimleriniz için lütfen ile
 ---
 
 © 2025 Burak Kurt. Tüm hakları saklıdır.
+
+
+-----
+
+
+# ✈️ Civil and Military Aircraft Recognition Dataset
+
+A high-quality image dataset for recognizing and classifying both **civil** and **military** aircraft from various perspectives.
+
+---
+
+## 📁 Dataset Overview
+
+This dataset is designed for training machine learning models in aircraft recognition. It includes:
+
+- **Civil Aircraft**: Airbus, Boeing, and more  
+- **Military Aircraft**: WWII to modern combat aircraft  
+- **UAVs (Drones)**: MQ-9 Reaper, Predator, DJI Phantom, Bayraktar TB2  
+- **Trainer Aircraft**: Cessna 172, Piper PA-28, Diamond DA20  
+
+---
+
+## 📊 Dataset Statistics
+
+| Category  | Images | Classes |
+|-----------|--------|---------|
+| Civil     | 680    | 17      |
+| Military  | 7,467  | 30      |
+| UAVs      | 87     | 5       |
+| Trainer   | 41     | 3       |
+| **Total** | 8,275  | 55      |
+
+### 📌 Dataset Split
+
+- Train: 5,777 images  
+- Validation: 1,272 images  
+- Test: 1,226 images  
+
+---
+
+## 🗂️ Directory Structure
+data/
+├── final/
+│   ├── train/
+│   │   ├── civil/
+│   │   │   ├── [uçak_modeli_1]/
+│   │   │   ├── [uçak_modeli_2]/
+│   │   │   └── ...
+│   │   ├── military/
+│   │   ├── uav/
+│   │   └── training/
+│   ├── test/
+│   │   ├── civil/
+│   │   ├── military/
+│   │   ├── uav/
+│   │   └── training/
+│   └── validation/
+│       ├── civil/
+│       ├── military/
+│       ├── uav/
+│       └── training/
+├── metadata/
+│   ├── aircraft_metadata.json
+│   ├── dataset_summary.json
+│   ├── sample_images/
+│   └── visualizations/
+```
+
+---
+
+## 🖼️ Image Specifications
+
+- Size: **224x224 pixels**
+- Format: **RGB JPEG**
+- Labels: **Hierarchical (category → manufacturer → model)**
+
+---
+
+## 🧠 Example Usage (TensorFlow)
+
+```python
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
+from tensorflow.keras.models import Model
+
+base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+base_model.trainable = False
+
+x = GlobalAveragePooling2D()(base_model.output)
+x = Dense(1024, activation='relu')(x)
+output = Dense(NUM_CLASSES, activation='softmax')(x)
+
+model = Model(inputs=base_model.input, outputs=output)
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+history = model.fit(train_generator, validation_data=val_generator, epochs=20)
+
+🔧 Possible Applications
+
+    Aircraft recognition and detection
+
+    Transfer learning / pretrained models
+
+    Aviation security and monitoring systems
+
+    Academic research in aviation and defense technologies
+
+📜 License & Sources
+
+Images were collected from the following public/open sources:
+
+    FGVC Aircraft Dataset
+
+    WWII Aircraft Archives (CC0)
+
+    Web-scraped images (CC BY 4.0)
+
+    📌 This dataset is free for academic and non-commercial research purposes.
+
+🙏 Acknowledgements
+
+Special thanks to:
+
+    Oxford VGG Group
+
+    Kaggle Contributors
+
+    Wikimedia Commons
+
+    Public Domain Aircraft Archives
+
+📬 Contact
+Burak Kurt
+© 2025 Burak Kurt – All rights reserved.
