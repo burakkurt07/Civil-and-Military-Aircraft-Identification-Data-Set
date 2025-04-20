@@ -123,7 +123,7 @@ Bu veri seti aşağıdaki alanlarda kullanılabilir:
    - Uçak spotterlar için referans
    - Havacılık meraklıları için tanıma uygulamaları
 
-## Örnek Kullanım
+## 🧠 Örnek Kullanım (TensorFlow)
 
 ### Python ile Görüntü Sınıflandırma Modeli Eğitimi
 
@@ -318,7 +318,7 @@ data/
 
 ## 🧠 Example Usage (TensorFlow)
 
-```python
+python
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
@@ -336,7 +336,7 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 
 history = model.fit(train_generator, validation_data=val_generator, epochs=20)
 
-🔧 Possible Applications
+## 🔧 Possible Applications
 
     Aircraft recognition and detection
 
@@ -346,7 +346,7 @@ history = model.fit(train_generator, validation_data=val_generator, epochs=20)
 
     Academic research in aviation and defense technologies
 
-📜 License & Sources
+## 📜 License & Sources
 
 Images were collected from the following public/open sources:
 
@@ -356,9 +356,9 @@ Images were collected from the following public/open sources:
 
     Web-scraped images (CC BY 4.0)
 
-    📌 This dataset is free for academic and non-commercial research purposes.
+##    📌 This dataset is free for academic and non-commercial research purposes.
 
-🙏 Acknowledgements
+## 🙏 Acknowledgements
 
 Special thanks to:
 
