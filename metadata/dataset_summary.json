@@ -1,0 +1,104 @@
+{
+    "total_images": 8275,
+    "categories": {
+        "civil": {
+            "total": 680,
+            "train": 476,
+            "test": 102,
+            "validation": 102,
+            "classes": [
+                "ATR 42",
+                "ATR 72",
+                "Airbus A220",
+                "Airbus A318",
+                "Airbus A319",
+                "Airbus A320",
+                "Airbus A330",
+                "Airbus A350",
+                "Airbus A380",
+                "Airbus a321",
+                "Boeing 737 NG",
+                "Boeing 737 max",
+                "Boeing 747",
+                "Boeing 767",
+                "Boeing 777",
+                "Boeing 777X",
+                "Boeing 787"
+            ]
+        },
+        "military": {
+            "total": 7467,
+            "train": 5213,
+            "test": 1106,
+            "validation": 1148,
+            "classes": [
+                "Avro Lancaster",
+                "Bell P-63 Kingcobra",
+                "Boeing B-17 Flying Fortress",
+                "Boeing B-29 Superfortress",
+                "Boeing P-26 Peashooter",
+                "Brewster F2A Buffalo",
+                "Consolidated PBY Catalina",
+                "Curtiss P-40 Warhawk",
+                "Douglas A-20 Havoc",
+                "Douglas C-47 Skytrain",
+                "Douglas SBD Dauntless",
+                "Douglas TBD Devastator",
+                "Focke-Wulf Fw 190",
+                "Grumman F6F Hellcat",
+                "Grumman F7F Tigercat",
+                "Grumman TBF Avenger",
+                "Hawker Hurricane",
+                "Junkers Ju 87",
+                "Lockheed P-38 Lightning",
+                "Messerschmitt Bf 109",
+                "Mitsubishi A6M Zero",
+                "North American P51 Mustang",
+                "Northrop P-61 Black Widow",
+                "Republic P-43 Lancer",
+                "Republic P-47 Thunderbolt",
+                "Seversky P-35",
+                "Supermarine Spitfire",
+                "Vought F4U Corsair",
+                "Waco CG-4",
+                "de Havilland Mosquito"
+            ]
+        },
+        "uav": {
+            "total": 87,
+            "train": 60,
+            "test": 12,
+            "validation": 15,
+            "classes": [
+                "MQ-9_Reaper_drone",
+                "Global_Hawk_UAV",
+                "Predator_drone_aircraft",
+                "DJI_Phantom_drone",
+                "Bayraktar_TB2_drone"
+            ]
+        },
+        "training": {
+            "total": 41,
+            "train": 28,
+            "test": 6,
+            "validation": 7,
+            "classes": [
+                "Cessna_172_training_aircraft",
+                "Piper_PA-28_Cherokee",
+                "Diamond_DA20_trainer"
+            ]
+        },
+        "cargo": {
+            "total": 0,
+            "train": 0,
+            "test": 0,
+            "validation": 0,
+            "classes": []
+        }
+    },
+    "splits": {
+        "train": 5777,
+        "test": 1226,
+        "validation": 1272
+    }
+}
