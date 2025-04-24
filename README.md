@@ -1,5 +1,9 @@
 TR & EN |
 
+**Medium:** https://medium.com/@burak0564/burak-kurt-sivil-ve-askeri-u%C3%A7ak-tan%C4%B1ma-veri-seti-v1-ve-opencv-ile-ger%C3%A7ek-zamanl%C4%B1-u%C3%A7ak-tan%C4%B1ma-edc346ad76cf
+
+**Academia:** https://www.academia.edu/128987256/Sivil_ve_Askeri_U%C3%A7ak_Tan%C4%B1ma_Veri_Seti_Makine_%C3%96%C4%9Frenimi_Tabanl%C4%B1_U%C3%A7ak_S%C4%B1n%C4%B1fland%C4%B1rma_Sistemleri_i%C3%A7in_Kapsaml%C4%B1_Veri_Kayna%C4%9F%C4%B1_ve_OpenCV_ile_Ger%C3%A7ek_Zamanl%C4%B1_U%C3%A7ak_Tan%C4%B1ma
+
 # ✈️ Sivil ve Askeri Uçak Tanıma Veri Seti
 
 Bu veri seti, hem sivil hem de askeri uçakları içeren kapsamlı bir uçak tanıma veri setidir. Veri seti, farklı açılardan görüntüler içerir ve çeşitli uçak kategorilerini kapsar.
